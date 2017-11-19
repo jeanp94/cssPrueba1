@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            font-family: 'Indie Flower', cursive;
+            font-family: 'Arvo', serif;
+            font-family: 'Lobster', cursive;
+        }
+body{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.texto{
+    position: relative;
+    font-size: 4.5em;
+    color:transparent;
+    background-image: url('../img/bg1.jpg');
+    -webkit-text-stroke: 1px rgba(0,0,0,.4);
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    background-position: -150% 0;
+    -webkit-transition: all 1s ease;
+    letter-spacing: .3rem;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    -webkit-animation: carga 2.5s linear infinite;
+            animation: carga 2.5s linear infinite;
+    z-index: 1;
+}
+@-webkit-keyframes carga {
+    from{
+        -webkit-text-stroke: 1px rgba(0,0,0,.7);
+        background-position: 200% 0;
+        font-size: 4.5rem;
+    }
+    to{
+        -webkit-text-stroke: 3px rgba(0,0,0,0.4);
+        background-position: 0% 0;
+        font-size: 4rem;
+    }
+}
+@keyframes carga {
+    from{
+        -webkit-text-stroke: 1px rgba(0,0,0,.7);
+        background-position: 200% 0;
+        font-size: 4.5rem;
+    }
+    to{
+        -webkit-text-stroke: 3px rgba(0,0,0,0.4);
+        background-position: 0% 0;
+        font-size: 4rem;
+    }
+}
+.misil{
+    width: 30px;
+    height: 30px;
+    background:paleturquoise;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 0;
+    -webkit-animation: misil linear 3s infinite;
+            animation: misil linear 3s infinite;
+    border: 1px solid rgba(0,0,0,.2);
+}
+.misil:nth-child(1){
+   top: 40%;
+   left: 50%;
+}
+.misil:nth-child(2){
+    top: 60%;
+    left:50%;
+ }
+ .misil:nth-child(3){
+    top: 50%;
+    left:50%;
+ }
+ .misil:nth-child(4){
+    top:50%;
+    left:60%;
+ }
+ .misil:nth-child(5){
+    top:50%;
+    left:40%;
+ }
+ @-webkit-keyframes misil {
+    from{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    to{
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    }
+}
+ @keyframes misil {
+    from{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    to{
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    }
+}
